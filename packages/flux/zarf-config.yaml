@@ -1,0 +1,9 @@
+log_level: info
+package:
+    create:
+        max_package_size: 0
+        set: {}
+        skip_sbom: true
+    deploy:
+        components: "flux"
+        set: {}

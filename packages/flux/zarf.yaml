@@ -1,0 +1,17 @@
+kind: ZarfPackageConfig
+metadata:
+  name: flux
+  description: Deploy flux in cluster - blah
+
+components:
+  - name: flux
+    description: Installs the flux CRDs / controllers to use flux-based deployments in the cluster
+    required: true
+    manifests:
+      - name: flux-crds
+        namespace: flux
+        files:
+          - flux-install.yaml
+    images:
+      - ghcr.io/fluxcd/kustomize-controller:v0.27.1
+      - ghcr.io/fluxcd/source-controller:v0.28.0
