@@ -24,3 +24,8 @@ jobs:
         run: go get dagger.io/dagger@latest cloud.google.com/go/run/apiv2
       - name: Release and deploy with Dagger
         run: go run ci/main.go
+      - name: Get build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: packages
+          path: ./build/* 
