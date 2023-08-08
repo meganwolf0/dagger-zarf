@@ -1,7 +1,7 @@
 kind: ZarfPackageConfig
 metadata:
   name: podinfo
-  description: Deploy podinfo via flux
+  description: Deploy podinfo via flux.
 
 components:
   - name: podinfo-via-flux

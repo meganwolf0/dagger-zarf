@@ -1,7 +1,7 @@
 kind: ZarfPackageConfig
 metadata:
   name: flux
-  description: Deploy flux in cluster - blah
+  description: Deploy flux in cluster
 
 components:
   - name: flux
@@ -14,4 +14,4 @@ components:
           - flux-install.yaml
     images:
       - ghcr.io/fluxcd/kustomize-controller:v0.27.1
-      - ghcr.io/fluxcd/source-controller:v0.28.0
+      - registry1.dso.mil/ironbank/fluxcd/source-controller:v0.28.0
