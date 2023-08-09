@@ -15,11 +15,6 @@ variables:
     prompt: true
 
 components:
-  - name: flux
-    required: true
-    import:
-      path: ../flux-iron-bank
-
   - name: big-bang-core-standard-assets
     description: "Git repositories and OCI images used by Big Bang Core"
     required: true
