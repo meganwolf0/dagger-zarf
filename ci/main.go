@@ -58,9 +58,9 @@ func build(ctx context.Context) error {
 	// wg.Add(1)
 	// go buildPackage(client, ctx, zarf, "bigbang", &wg, BuildOpts{registry1: true})
 
-	// Try with version of big bang that doesn't use the zarf "extension"
-	wg.Add(1)
-	go buildPackage(client, ctx, zarf, "big-bang-core", &wg, BuildOpts{registry1: true})
+	// Try with version of big bang that doesn't use the zarf "extension" - nope
+	// wg.Add(1)
+	// go buildPackage(client, ctx, zarf, "big-bang-core", &wg, BuildOpts{registry1: true})
 
 	wg.Wait()
 
