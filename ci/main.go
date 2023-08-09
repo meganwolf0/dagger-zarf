@@ -55,8 +55,12 @@ func build(ctx context.Context) error {
 	// WHY when I include this section, it re-runs everything?? Even if I don't include mounted cache
 	// bbCache := client.CacheVolume("bb-cache") // since this is a big package, try caching
 	// zarf = zarf.WithMountedCache("~/.zarf-cache", bbCache)
+	// wg.Add(1)
+	// go buildPackage(client, ctx, zarf, "bigbang", &wg, BuildOpts{registry1: true})
+
+	// Try with version of big bang that doesn't use the zarf "extension"
 	wg.Add(1)
-	go buildPackage(client, ctx, zarf, "bigbang", &wg, BuildOpts{registry1: true})
+	go buildPackage(client, ctx, zarf, "big-bang-core", &wg, BuildOpts{registry1: true})
 
 	wg.Wait()
 

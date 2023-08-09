@@ -1,0 +1,44 @@
+architecture: ""
+init:
+    components: ""
+    git:
+        pull_password: ""
+        pull_username: ""
+        push_password: ""
+        push_username: zarf-git-user
+        url: ""
+    registry:
+        nodeport: 0
+        pull_password: ""
+        pull_username: ""
+        push_password: ""
+        push_username: zarf-push
+        secret: ""
+        url: ""
+    storage_class: ""
+insecure: false
+log_level: info
+no_log_file: false
+no_progress: false
+package:
+    create:
+        max_package_size: 0
+        output_directory: ""
+        sbom: false
+        sbom_output: ""
+        set: {}
+        signing_key: ""
+        skip_sbom: false
+    deploy:
+        components: ""
+        public_key: ""
+        set: {}
+        sget: ""
+        shasum: ""
+    publish:
+        oci_concurrency: 3
+    pull:
+        oci_concurrency: 3
+        output_directory: ""
+tmp_dir: ""
+zarf_cache: ~/.zarf-cache
